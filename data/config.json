@@ -1,0 +1,11 @@
+{
+    "directories": {
+        "data": "./data/",
+        "env": "./venv"
+    },
+    "parameters": {
+        "epochs": 400,
+        "batch": 4000,
+        "optimizer": "adam"
+    }
+}
