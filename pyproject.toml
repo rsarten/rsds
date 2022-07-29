@@ -9,6 +9,9 @@ classifiers = [
 dependencies = [
   "numpy>=1.23.0",
   "pandas>=1.4.3",
+  "attrs>=21.4.0",
+  "matplotlib>=3.5.2",
+  "seaborn>=0.11.2",
 ]
 description = "Functions to assist data science tasks"
 name = "rsds"
