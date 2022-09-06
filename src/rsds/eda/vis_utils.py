@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
+from matplotlib.axes import Axes
 from matplotlib.figure import Figure
 
 
@@ -15,7 +16,7 @@ def num_rows_cols(data: pd.DataFrame, cols: int = 5) -> tuple[int, int]:
     return num_rows, cols
 
 
-def figax(data: pd.DataFrame, col_n: int = 5) -> tuple[Figure, plt.Axes]:
+def figax(data: pd.DataFrame, col_n: int = 5) -> tuple[Figure, list[list[Axes]]]:
     """
     Return subplots (Figuere, Axes) for given data with specified column width.
     """

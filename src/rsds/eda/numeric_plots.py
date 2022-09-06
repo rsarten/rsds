@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 from matplotlib import pyplot as plt
+from matplotlib.axes import Axes
 from matplotlib.figure import Figure
 
 from .vis_utils import check_col_present, figax, move_frame
@@ -13,19 +14,13 @@ from .vis_utils import check_col_present, figax, move_frame
 
 
 def plot_hist(
-    row: int, col: int, axes: plt.Axes, data: pd.DataFrame, col_name: str, **kwargs
+    row: int, col: int, axes: Axes, data: pd.DataFrame, col_name: str, **kwargs
 ) -> None:
     axes[row, col].hist(data[col_name], **kwargs)  # type: ignore
 
 
 def plot_scat(
-    row: int,
-    col: int,
-    axes: plt.Axes,
-    data: pd.DataFrame,
-    colx: str,
-    coly: str,
-    **kwargs
+    row: int, col: int, axes: Axes, data: pd.DataFrame, colx: str, coly: str, **kwargs
 ) -> None:
     axes[row, col].scatter(data[colx], data[coly], **kwargs)  # type: ignore
 
