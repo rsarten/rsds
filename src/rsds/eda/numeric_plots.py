@@ -8,7 +8,8 @@ from matplotlib import pyplot as plt
 from matplotlib.axes import Axes
 from matplotlib.figure import Figure
 
-from .vis_utils import check_col_present, figax, move_frame
+from ..utilities.check import check_col_present
+from .vis_utils import figax, move_frame
 
 # Ignoring Typing issues for accessing plt.Axes elements and numpy types
 

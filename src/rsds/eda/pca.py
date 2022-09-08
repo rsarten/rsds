@@ -4,16 +4,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from sklearn.decomposition import PCA
-from sklearn.preprocessing import StandardScaler
 
-
-def scale_data(data: pd.DataFrame) -> pd.DataFrame:
-    numeric_data = data.select_dtypes(include=np.number)  # type:ignore
-    scaler = StandardScaler()
-    numeric_scaled = scaler.fit_transform(numeric_data)
-    numeric_scaled = pd.DataFrame(numeric_scaled)
-    numeric_scaled.columns = numeric_data.columns
-    return numeric_scaled
+from ..utilities.transform.core import scale_data
 
 
 def generate_pca_loadings(data: pd.DataFrame) -> tuple[pd.DataFrame, np.ndarray]:
